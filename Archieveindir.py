@@ -93,7 +93,8 @@ if os.path.exists("./useragents.txt"):
 else:
     with open('useragents.txt', 'w') as f:
         for agent in backupUserAgentsList:
-            f.writelines(agent)
+            #f.writelines(agent)
+            f.write(agent+"\n")
         f.close()
 def get_chrome_latest_release(platform: str, channel: str):
     url = f"https://versionhistory.googleapis.com/v1/chrome/platforms/{platform}/channels/{channel}/versions"
